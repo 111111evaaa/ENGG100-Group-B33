@@ -10,7 +10,7 @@
     function [timeStamp, altitude, latitude, longitude] = DataExtractor(filepath)
         % Open the file using the supplied filepath
         file = fopen(filepath, 'r');
-        timeStamp = [];
+        timeStamp = file(1:4:end,:);
         latitude = [];
         longitude = [];
         altitude = [];
